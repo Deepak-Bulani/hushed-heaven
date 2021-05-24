@@ -101,10 +101,6 @@ body {
     float: none !important;
 }
 
-.fixed-header.header {
-    padding: 10px 0;
-}
-
 .logoImg {
     width: 48px;
     height: 58px;
