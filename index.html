@@ -27,15 +27,18 @@
         <section class="main-wrapper">
             <section class="hero-banner">
                 <div class="hero-img">
-                    <img
-                        src="resources/images/allison-huang.jpg"
-                        alt="allison huang"
-                    />
+                    <picture>
+                        <source srcset="resources/images/allison-huang-mobile.jpg" media="screen and (max-width: 767px)">
+                        <img
+                            src="resources/images/allison-huang.jpg"
+                            alt="allison huang"
+                        />
+                    </picture>
                 </div>
                 <div class="hero-text">
                     <div class="container">
                         <div class="row">
-                            <h1 class="heading-one col-xs-10">
+                            <h1 class="heading-one col-xs-12 col-sm-10">
                                 Best kept secret luxury villas in the finest
                                 settings
                             </h1>
@@ -65,7 +68,7 @@
                 </div>
             </section>
 
-            <div class="pattern-img img-1"></div>
+            <div class="pattern-img img-1" data-parallax></div>
 
             <section class="feature-wrap">
                 <div class="container">
@@ -89,7 +92,7 @@
                     </div>
                 </div>
             </section>
-            <div class="pattern-img img-2"></div>
+            <div class="pattern-img img-2" data-parallax></div>
             <section class="hero-variant-home">
                 <div class="container">
                     <div class="row">
@@ -107,10 +110,13 @@
                             </ul>
                         </div>
                         <div class="col-xs-12 hero-img">
+                            <picture>
+                                <source srcset="resources/images/alexandre-chambon-mobile.jpg" media="screen and (max-width: 767px)">
                             <img
                                 src="resources/images/alexandre-chambon.jpg"
                                 alt="alexandre chambon"
                             />
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -170,7 +176,7 @@
                 </div>
             </section>
         </section>
-        <div class="pattern-img img-3"></div>
+        <div class="pattern-img img-3" data-parallax></div>
         <footer class="footer">
             <div class="container">
                 <div class="row">
