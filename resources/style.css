@@ -98,7 +98,7 @@ body {
 
 .header {
     background-color:#ECEFF0;
-    padding: 27px 0;
+    padding: 17px 0;
     text-align: center;
     position: sticky;
     top: 0;
@@ -112,8 +112,8 @@ body {
 }
 
 .logoImg {
-    width: 48px;
-    height: 58px;
+    width: 41px;
+    height: 50px;
     background: url('images/common.svg#logoImg') no-repeat scroll 0 0;
     background-size: cover;
     display: inline-block;
@@ -121,8 +121,8 @@ body {
 }
 
 .logoText {
-    width: 118px;
-    height: 58px;
+    width: 102px;
+    height: 50px;
     background: url('images/common.svg#logoText') no-repeat scroll 0 0;
     background-size: contain;
     display: inline-block;
@@ -131,7 +131,7 @@ body {
 }
 
 .fixed-header .logoImg {
-    transform: translateX(85px);
+    transform: translateX(82px);
 }
 
 .fixed-header .logoText {
@@ -163,6 +163,7 @@ body {
 }
 
 .hero-banner .hero-text .heading-one {
+    font-family: 'Comfortaa';
     margin: 0 auto;
     float: none;
     color: #ECEFF0;
@@ -172,7 +173,7 @@ body {
 }
 
 .split-content {
-    margin-bottom: 235px;
+    margin-bottom: 130px;
 }
 
 .split-content .split-heading {
@@ -376,6 +377,7 @@ line-height: 1.22
 
 .footer .designby a {
     color: #4BBAB8;
+    font-weight: 700;
 }
 
 .pattern-img {
@@ -394,7 +396,7 @@ line-height: 1.22
     margin-bottom: -310px;
     margin-top: -215px;
     z-index: -1;
-    background-position-x: calc(1% + 100px);
+    background-position-x: calc(1% + 140px);
     float: right;
 }
 
