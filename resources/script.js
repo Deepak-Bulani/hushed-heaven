@@ -2,14 +2,9 @@ const parallax = () => {
 
     const pA = Array.from (document.querySelectorAll ('[data-parallax]'));
     pA.map (el => {
-        const s = Math.min (1, Math.max (0, el.dataset.speed)) || 1;
-        const r = el.dataset.reverse;
-        const opa = el.dataset.opacity;
-        const trans = el.dataset.translate;
-        const sca = el.dataset.scale;
 
-        let lastPos, newPos,delta;
-        newPos = (window.scrollY - el.offsetTop + window.innerHeight) / 6;
+        let newPos;
+        newPos = (window.scrollY - el.offsetTop + window.innerHeight) / 10;
 
         if (isVisible(el)) {
 
@@ -41,5 +36,40 @@ const isVisible = (el) => {
         );
 }
 
+let scrollPos = 0;
+
+const wheelZoom = () => {
+    const elemZoom = Array.from (document.querySelectorAll ('[data-zoom]'));
+    elemZoom.map (el => {
+        let zoomValue = 1 ;
+        let style = window.getComputedStyle(el, null).getPropertyValue("transform");
+        if ((document.body.getBoundingClientRect()).top > scrollPos) {
+            zoomValue = zoomValue - 0.0005;
+        } else {
+            zoomValue = zoomValue + 0.001;
+        }
+
+        if (isVisible(el) && style) {
+            el.style.transform = `${style} scale(${zoomValue})`;
+            el.style.webkitTransform = `${style} scale(${zoomValue})`;
+            el.style.msTransform = `${style} scale(${zoomValue})`;
+        }
+    })
+    scrollPos = (document.body.getBoundingClientRect()).top;
+}
+
+const textAnimation = () => {
+    const textElem = Array.from (document.querySelectorAll ('[data-text-appear]'));
+    textElem.map (el => {
+        if (isVisible(el) ) {
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active");
+        }
+    })
+}
+
 window.addEventListener ('scroll', parallax );
+window.addEventListener ('scroll', wheelZoom );
+window.addEventListener ('scroll', textAnimation );
 
